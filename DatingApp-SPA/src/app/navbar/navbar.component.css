@@ -1,0 +1,9 @@
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+img {
+    height: 22px;
+    width: 22px;
+    border-radius: 12px;
+}

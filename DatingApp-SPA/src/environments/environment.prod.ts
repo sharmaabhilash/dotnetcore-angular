@@ -1,10 +1,22 @@
 export const environment = {
   production: true,
-  
-  baseUrl: 'http://localhost:5000',
-  getAllValueUrl: '/api/values',
-  getValueByIdUrl: '/api/value/',
 
-  loginUrl: '/api/auth/login',
-  registerUrl: '/api/auth/register'
+  baseUrl: '/api/',
+  getAllValueUrl: 'values',
+  getValueByIdUrl: 'value/',
+
+  loginUrl: 'auth/login',
+  registerUrl: 'auth/register',
+
+  getusers: 'users/getusers',
+  getuser: 'users/getuser/',
+
+  updateusers: 'users/updateuser/',
+  photoUrl: '/photos',
+  usersUrl: 'users/',
+  setMainUrl: '/setmain',
+  likeUrl: '/like/',
+  messagesUrl: '/messages',
+  threadUrl: '/thread/',
+  readUrl: '/readUrl'
 };

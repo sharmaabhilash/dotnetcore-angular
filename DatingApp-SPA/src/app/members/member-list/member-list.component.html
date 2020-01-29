@@ -4,7 +4,7 @@
 
 <div class="container mt-5">
   <div class="">
-    <form #form="ngForm" (ngSubmit)="loadUsers()" class="form-inline" novalidate>
+    <form #form="ngForm" class="form-inline" novalidate>
       <div class="form-group">
         <label for="minAge">Age From</label>
         <input type="number" class="form-control ml-1" style="width: 70px" id="minAge" name="minAge" [(ngModel)]="userParams.minAge" />
@@ -21,21 +21,19 @@
           </option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary" style="margin-left:10px">Apply Filters</button>
+      <button type="submit" class="btn btn-primary" (click)="loadUsers()" style="margin-left:10px">Apply Filters</button>
       <button type="button" class="btn btn-info" style="margin-left:10px" (click)="resetFilters()">Reset Filter</button>
+      <div class="btn-group ml-5">
+        <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" btnRadio="lastActive"
+          (click)="loadUsers()">
+          Last Active
+        </button>
+        <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" btnRadio="created"
+          (click)="loadUsers()">
+          Newest Members
+        </button>
+      </div>
     </form>
-  </div>
-  <div class="col">
-    <div class="btn-group">
-      <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" btnRadio="lastActive"
-        (click)="loadUsers()">
-        Last Active
-      </button>
-      <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" btnRadio="created"
-        (click)="loadUsers()">
-        Newest Members
-      </button>
-    </div>
   </div>
   <br>
   <div class="row">

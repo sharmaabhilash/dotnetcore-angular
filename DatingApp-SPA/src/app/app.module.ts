@@ -31,7 +31,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { PreventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes.guard';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
-import { FileSelectDirective } from 'ng2-file-upload';
+import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
 import { TimeAgoPipe } from 'time-ago-pipe';
 import { ListsResolver } from './_resolvers/lists.resolver';
 import { MessagesResolver } from './_resolvers/messages-resolver';
@@ -62,7 +62,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
       MemberDetailComponent,
       MemberEditComponent,
       PhotoEditorComponent,
-      FileSelectDirective,
+      //FileSelectDirective,
       TimeAgoPipe,
       MemberMessagesComponent
    ],
@@ -86,7 +86,8 @@ export class CustomHammerConfig extends HammerGestureConfig {
       NgMultiSelectDropDownModule.forRoot(),
       BsDatepickerModule.forRoot(),
       PaginationModule.forRoot(),
-      ButtonsModule.forRoot()
+      ButtonsModule.forRoot(),
+      FileUploadModule
    ],
    providers: [
       AuthenticationService,

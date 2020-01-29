@@ -19,7 +19,10 @@ export const environment = {
   photoUrl: '/photos',
   usersUrl: 'users/',
   setMainUrl: '/setmain',
-  likeUrl: '/like/'
+  likeUrl: '/like/',
+  messagesUrl: '/messages',
+  threadUrl: '/thread/',
+  readUrl: '/readUrl'
 };
 
 /*

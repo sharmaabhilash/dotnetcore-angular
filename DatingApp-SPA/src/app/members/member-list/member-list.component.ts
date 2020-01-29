@@ -25,11 +25,10 @@ export class MemberListComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.usersList = data['users'].result;
-      console.log(data['users'].pagination);
-      this.pagination = data['users'].pagination;
+      this.usersList = data.users.result;
+      this.pagination = data.users.pagination;
     });
-    this.userParams.gender = this.user.gender == 'male' ? 'female' : 'male';
+    this.userParams.gender = this.user.gender === 'male' ? 'female' : 'male';
     this.userParams.minAge = 18;
     this.userParams.maxAge = 99;
     this.userParams.orderBy = 'lastActive';
@@ -47,11 +46,11 @@ export class MemberListComponent implements OnInit {
         this.pagination = res.pagination;
       }, error => {
         this.alertify.error(error);
-      })
+      });
   }
 
   resetFilters() {
-    this.userParams.gender = this.user.gender == 'male' ? 'female' : 'male';
+    this.userParams.gender = this.user.gender === 'male' ? 'female' : 'male';
     this.userParams.minAge = 18;
     this.userParams.maxAge = 99;
     this.loadUsers();

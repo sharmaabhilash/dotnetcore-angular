@@ -3,7 +3,7 @@
 </div>
 
 <div class="container mt-5">
-  <div class="col-sm-8">
+  <div class="">
     <form #form="ngForm" (ngSubmit)="loadUsers()" class="form-inline" novalidate>
       <div class="form-group">
         <label for="minAge">Age From</label>
@@ -25,7 +25,6 @@
       <button type="button" class="btn btn-info" style="margin-left:10px" (click)="resetFilters()">Reset Filter</button>
     </form>
   </div>
-  <br>
   <div class="col">
     <div class="btn-group">
       <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" btnRadio="lastActive"
@@ -38,6 +37,7 @@
       </button>
     </div>
   </div>
+  <br>
   <div class="row">
     <div *ngFor="let user of usersList" class="col-lg-2 col-md-3 col-sm-6">
       <app-member-card [user]="user"></app-member-card>

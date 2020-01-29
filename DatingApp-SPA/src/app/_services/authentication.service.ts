@@ -21,7 +21,7 @@ export class AuthenticationService {
 
   loginUser(loginModel: any) {
 
-    let url = environment.baseUrl + environment.loginUrl;
+    const url = environment.baseUrl + environment.loginUrl;
 
     return this.http.post(url, loginModel)
       .pipe(map((response: any) => {
